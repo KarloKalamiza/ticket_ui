@@ -7,8 +7,12 @@ environment:
   sdk: '>=3.0.5 <4.0.0'
 
 dependencies:
+  barcode_widget: ^2.0.4
+  fluentui_icons: ^1.0.0
   flutter:
     sdk: flutter
+  gap: ^3.0.1
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +21,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+      - lib/assets/images/

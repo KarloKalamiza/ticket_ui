@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_ui/screens/bottom_bar.dart';
+import 'package:ticket_ui/utils/app_styles.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +11,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Ticket app",
+      theme: ThemeData(
+        primaryColor: primary
       ),
+      home: const BottomBar()
     );
   }
 }
