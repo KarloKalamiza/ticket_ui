@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import 'package:ticket_ui/utils/app_layout.dart';
 import 'package:ticket_ui/widgets/column_widget.dart';
 import 'package:ticket_ui/widgets/row_layout.dart';
+import 'package:ticket_ui/widgets/row_switch_widget.dart';
 
 import '../utils/app_styles.dart';
 
@@ -234,7 +235,7 @@ Container(
                     ),
                   ],
                 ),
-                Gap(AppLayout.getHeight(60)),
+                Gap(AppLayout.getHeight(60))
               ],
             ),
           )

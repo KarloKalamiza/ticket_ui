@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_ui/utils/app_styles.dart';
 
 import '../utils/app_layout.dart';
 
 class ThickContainer extends StatelessWidget {
-  const ThickContainer({super.key});
+  final bool? white;
+  const ThickContainer({super.key, this.white});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,8 @@ class ThickContainer extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppLayout.getHeight(20)),
           border:
-              Border.all(width: AppLayout.getHeight(2.5), color: Colors.white)),
+              Border.all(width: AppLayout.getHeight(2.5), 
+              color: white == null ? Styles.primaryColor: Colors.white)),
     );
   }
 }

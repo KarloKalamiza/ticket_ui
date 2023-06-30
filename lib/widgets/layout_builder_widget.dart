@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:ticket_ui/utils/app_styles.dart';
 
 class LayoutBuilderWidget extends StatelessWidget {
+  final bool? white;
   final int sections;
   final double width;
-  const LayoutBuilderWidget({super.key, required this.sections, this.width = 3.0});
+  const LayoutBuilderWidget({super.key, 
+    required this.sections, this.width = 3.0,  this.white});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +21,9 @@ class LayoutBuilderWidget extends StatelessWidget {
             (index) => SizedBox(
               width: width,
               height: 1,
-              child: const DecoratedBox(
+              child: DecoratedBox(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: white == null ? Colors.white : Styles.primaryColor,
                 ),
               ),
             ),
