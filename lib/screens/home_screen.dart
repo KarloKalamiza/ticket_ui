@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
@@ -7,9 +6,8 @@ import 'package:ticket_ui/utils/app_info_list.dart';
 import 'package:ticket_ui/utils/app_layout.dart';
 import 'package:ticket_ui/utils/app_styles.dart';
 import 'package:ticket_ui/widgets/hotel_view.dart';
-import 'package:ticket_ui/widgets/layout_builder_widget.dart';
+import 'package:ticket_ui/widgets/icon_text_widget.dart';
 import 'package:ticket_ui/widgets/row_layout.dart';
-import 'package:ticket_ui/widgets/thick_container.dart';
 import 'package:ticket_ui/widgets/ticket_view.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,7 +15,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = AppLayout.getSize(context);
     return Scaffold(
       backgroundColor: Styles.bgColor,
       body: ListView(
@@ -52,25 +49,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 Gap(AppLayout.getHeight(30)),
-                Container(
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius:
-                          BorderRadius.circular(AppLayout.getHeight(20))),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: AppLayout.getHeight(15),
-                    vertical: AppLayout.getHeight(15),
-                  ),
-                  child: Row(
-                    children: [
-                      const Icon(FluentSystemIcons.ic_fluent_search_regular),
-                      Gap(AppLayout.getHeight(10)),
-                      Text(
-                        "Search",
-                        style: Styles.headlineStyle3,
-                      )
-                    ],
-                  ),
+                const IconTextWidget(
+                  icon: Icon(FluentSystemIcons.ic_fluent_search_regular), 
+                  text: "Search"
                 ),
                 Gap(AppLayout.getHeight(30)),
                 const RowLayoutWidget(

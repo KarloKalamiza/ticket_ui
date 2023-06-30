@@ -14,7 +14,7 @@ class RowLayoutWidget extends StatelessWidget {
       children: [
         Text(
           firstText,
-          style: Styles.headlineStyle,
+          style: Styles.headlineStyle2,
         ),
         Text(
           secondText,
